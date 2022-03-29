@@ -1,0 +1,82 @@
+@charset "utf-8"
+
+/* 共通部分 */
+
+html{
+    font-size: 100%;
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.7;
+    color: #606060;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* header */
+
+    /* 將Logo、nav 水平排列 */
+    .page-header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Logo、nav 自動調節與邊界的距離 */
+    .wrapper{
+        max-width: auto;
+        margin: 0 auto;
+        padding: 0 4%;
+    }
+
+    .logo{
+        width: 120px;
+        margin-top: 6px;
+    }
+
+    .main-nav{
+        display: flex;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin-top: 28px;
+        list-style: none;
+    }
+
+    .main-nav li{
+        margin-left: 30px;
+    }
+
+    .main-nav a{
+        color: #606060;
+
+    }
+
+    /* ":hover" 滑鼠指向超連結會變色 */
+    .main-nav a:hover{
+        color:#ffffff
+    }
+
+/* 背景圖＋標題文字 */
+
+    /* 用 ID 加入圖片 URL */
+    #home{
+        background-image: url(/images/index-bg.jpg);
+        min-height: 100vh;
+    }
+    /* 滿版圖片 */
+    .big-bg{
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    .page-title{
+        text-align: center;
+        margin-top: 2%;
+        color: #606060;
+    }
