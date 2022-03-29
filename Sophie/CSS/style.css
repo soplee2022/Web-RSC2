@@ -62,7 +62,7 @@ img{
         color:#ffffff
     }
 
-/* 背景圖＋標題文字 */
+/* index 背景圖＋標題文字 */
 
     /* 用 ID 加入圖片 URL */
     #home{
@@ -79,4 +79,33 @@ img{
         text-align: center;
         margin-top: 2%;
         color: #606060;
+    }
+
+/* about 頁面 */
+
+    .about-bg{
+        background-image: url(/images/about-bg.jpg);
+        min-height: 80vh;
+    }
+    .about-title{
+        text-align: center;
+        margin-top: 5%;
+        color: #606060;
+    }
+    .about-content{
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 17%;
+        font-size: 1.2rem;
+    }
+    .about-2{
+        display: flex;
+        background-color: #DDDACE;
+        justify-content: space-around;
+        padding: 5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    .about-img{
+    width: 20vw;
     }
