@@ -95,9 +95,11 @@ img{
     .about-content{
         text-align: center;
         margin-top: 5%;
-        margin-bottom: 17%;
         font-size: 1.2rem;
     }
+
+    /* 修改：圖文間距／新增：文字左側線條 */
+
     .about-2{
         display: flex;
         background-color: #DDDACE;
@@ -107,5 +109,13 @@ img{
         padding-bottom: 3%;
     }
     .about-img{
-    width: 20vw;
+        display: inline-block;
+        width: 20vw;
+        align-self: center;
+    }
+    .about-description{
+        display: inline-block;
+        padding: 2vh;
+        border-left: #606060 solid 2px;
+        padding-left: 20px;       
     }
