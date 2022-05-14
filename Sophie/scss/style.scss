@@ -1,21 +1,42 @@
 /* @charset "utf-8" */
 
-/* 共通部分 */
+// 常用變數
+$base_font_size: 10px;
+$base_line_height: 1;
+$base_letter_spacing: 1px;
 
-html{
+// main-color
+$green_light: #dddace;
+$green_dark: #aca691;
+$white: #f1f1f1;
+$gray: #606060;
+
+// mixin 使用時機：整包樣式都要一樣的時候，減少重複的行為
+@mixin size($width,$height){
+    width: $width;
+    height: $height;
+}
+// all page css
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+html,body{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
     font-size: 100%;
+    font-weight: 200;
+    line-height: $base_line_height*1.7;
+    color: $gray;
 }
-
-body{
-    font-family: 'Noto Sans TC', sans-serif;
-    line-height: 1.7;
-    color: #606060;
-}
-
 a{
     text-decoration: none;
+    color: $gray;
+    // ":hover" 滑鼠指向超連結會變色
+    &:hover{
+        color:$white;
+    }
 }
-
 img{
     max-width: 100%;
 }
@@ -42,7 +63,7 @@ img{
 
     .main-nav{
         display: flex;
-        font-size: 1.2rem;
+        font-size: $base_font_size*2;
         text-transform: uppercase;
         margin-top: 28px;
         list-style: none;
@@ -50,16 +71,6 @@ img{
 
     .main-nav li{
         margin-left: 30px;
-    }
-
-    .main-nav a{
-        color: #606060;
-
-    }
-
-    /* ":hover" 滑鼠指向超連結會變色 */
-    .main-nav a:hover{
-        color:#ffffff
     }
 
 /* index 背景圖＋標題文字 */
@@ -77,23 +88,25 @@ img{
     }
     .page-title{
         text-align: center;
-        margin-top: 2%;
-        color: #606060;
+        margin-top: 5%;
+        font-weight: 300;
+        font-size: $base_font_size*3;
     }
     /* index-2 設定 */
     .index-2{
-        background-color: #DDDACE;
+        background-color: $green_light;
         display: flex;
-        font-size: 1.2rem;
-        height: 150px;
-        justify-content: center;
+        justify-content: space-around;
+        padding: 30px 60px;
+        font-size: $base_font_size*2.6;
+        height: 300px;
     }
     .index-2 div p{
         margin-top: 20px;
         margin-right: 30px;
+        letter-spacing: $base_letter_spacing;
     }
     .keywords{
-        /* border: solid 1px; */
         width: 150px;
         display: flex;
         align-items: center;
@@ -104,13 +117,10 @@ img{
         width: 100px;
     }
     .keywords a{
+        border: solid 1px;
         position: relative;
         right: 30px;
-        font-size: 1.2rem;
-        color: #606060;
-    }
-    .keywords a:hover{
-        color:#ffffff;
+        font-size: $base_font_size*2;
     }
     
 /* about 頁面 */
@@ -119,22 +129,14 @@ img{
         background-image: url(/images/about-bg.jpg);
         min-height: 80vh;
     }
-    .about-title{
-        text-align: center;
-        margin-top: 5%;
-        color: #606060;
-    }
     .about-content{
         text-align: center;
         margin-top: 5%;
         font-size: 1.2rem;
     }
-
-    /* 修改：圖文間距／新增：文字左側線條 */
-
     .about-2{
         display: flex;
-        background-color: #DDDACE;
+        background-color: $green_light;
         justify-content: space-around;
         padding: 5%;
         padding-top: 3%;
@@ -148,6 +150,6 @@ img{
     .about-description{
         display: inline-block;
         padding: 2vh;
-        border-left: #606060 solid 2px;
+        border-left: $gray solid 2px;
         padding-left: 20px;       
     }

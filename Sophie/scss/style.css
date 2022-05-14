@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* @charset "utf-8" */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  font-size: 100%;
+  font-weight: 200;
+  line-height: 1.7;
+  color: #606060;
+}
+
+a {
+  text-decoration: none;
+  color: #606060;
+}
+
+a:hover {
+  color: #f1f1f1;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* header */
+/* 將Logo、nav 水平排列 */
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* Logo、nav 自動調節與邊界的距離 */
+.wrapper {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.logo {
+  width: 120px;
+  margin-top: 6px;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 28px;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 30px;
+}
+
+/* index 背景圖＋標題文字 */
+/* 用 ID 加入圖片 URL */
+#home {
+  background-image: url(/images/index-bg.jpg);
+  min-height: 100vh;
+}
+
+/* 滿版圖片 */
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: 5%;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+/* index-2 設定 */
+.index-2 {
+  background-color: #dddace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px 60px;
+  font-size: 26px;
+  height: 300px;
+}
+
+.index-2 div p {
+  margin-top: 20px;
+  margin-right: 30px;
+  letter-spacing: 1px;
+}
+
+.keywords {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-left: 30px;
+}
+
+.keywords img {
+  width: 100px;
+}
+
+.keywords a {
+  border: solid 1px;
+  position: relative;
+  right: 30px;
+  font-size: 20px;
+}
+
+/* about 頁面 */
+.about-bg {
+  background-image: url(/images/about-bg.jpg);
+  min-height: 80vh;
+}
+
+.about-content {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 1.2rem;
+}
+
+.about-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #dddace;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.about-img {
+  display: inline-block;
+  width: 20vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.about-description {
+  display: inline-block;
+  padding: 2vh;
+  border-left: #606060 solid 2px;
+  padding-left: 20px;
+}
+/*# sourceMappingURL=style.css.map */
